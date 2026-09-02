@@ -13,7 +13,6 @@ export default function CalculatorWizard() {
     addOns: ['Eliminação de Delay'],
     clientName: '',
     clientPhone: '',
-    preferredDate: '',
   });
 
   const [step, setStep] = useState(1);
@@ -73,7 +72,6 @@ export default function CalculatorWizard() {
 
 🎯 *Serviço Escolhido:* ${formData.service}
 🔥 *Opcionais / Extras:* ${formData.addOns.length > 0 ? formData.addOns.join(', ') : 'Nenhum'}
-📆 *Preferência de Data:* ${formData.preferredDate || 'A combinar'}
 -----------------------------------------
 Gostaria de confirmar os valores e a disponibilidade de horário na oficina!`;
 
@@ -435,18 +433,6 @@ Gostaria de confirmar os valores e a disponibilidade de horário na oficina!`;
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-xs font-mono text-slate-400 mb-1.5 uppercase">
-                    Data ou Dia de Preferência
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Ex: Esta semana, próxima segunda-feira, ou aos sábados"
-                    value={formData.preferredDate}
-                    onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                    className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059]"
-                  />
-                </div>
 
                 {/* Final WhatsApp Call To Action Button */}
                 <div className="p-5 rounded-xl bg-[#090b10] border border-[#c5a059]/30 mt-6">
