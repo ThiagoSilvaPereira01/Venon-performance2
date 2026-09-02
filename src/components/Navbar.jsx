@@ -14,10 +14,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Serviços & Remap', href: '#servicos' },
-    { label: 'Dinamômetro Servitec', href: '#dinamometro' },
-    { label: 'Simulador / Orçamento', href: '#orcamento' },
-    { label: 'Projetos & Oficina', href: '#galeria' },
+    { label: 'Serviços', href: '#servicos' },
+    { label: 'Dinamômetro', href: '#dinamometro' },
+    { label: 'Simulador', href: '#orcamento' },
+    { label: 'Galeria', href: '#galeria' },
     { label: 'Avaliações', href: '#avaliacoes' },
     { label: 'Localização', href: '#localizacao' },
   ];
@@ -65,39 +65,39 @@ export default function Navbar() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#08090c]/95 backdrop-blur-md border-b border-[#c5a059]/20 py-3.5 shadow-2xl'
-            : 'bg-[#08090c]/80 backdrop-blur-sm border-b border-white/[0.05] py-4'
+            ? 'bg-[#08090c]/95 backdrop-blur-md border-b border-[#c5a059]/20 py-2.5 shadow-2xl'
+            : 'bg-[#08090c]/85 backdrop-blur-sm border-b border-white/[0.05] py-3.5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#c5a059] to-[#866523] p-[1px] shadow-lg shadow-black/50">
+          <a href="#" className="flex items-center gap-2.5 group shrink-0">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#c5a059] to-[#866523] p-[1px] shadow-md">
               <div className="w-full h-full bg-[#0d0f15] rounded-[11px] flex items-center justify-center group-hover:bg-[#141824] transition">
-                <span className="font-display font-black text-xl text-[#dfb76c]">V</span>
+                <span className="font-display font-black text-lg text-[#dfb76c]">V</span>
               </div>
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="font-display font-black text-2xl tracking-wider text-white">
+              <div className="flex items-center gap-1">
+                <span className="font-display font-black text-xl tracking-wider text-white">
                   VENON
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#c5a059]"></span>
               </div>
-              <span className="font-mono text-[9px] tracking-[0.28em] text-[#c5a059] font-bold uppercase -mt-1">
+              <span className="font-mono text-[8px] tracking-[0.28em] text-[#c5a059] font-bold uppercase -mt-0.5">
                 PERFORMANCE
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7 shrink-0">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 hover:after:w-full after:w-0 after:h-[2px] after:bg-[#c5a059] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200"
+                className="text-xs xl:text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 whitespace-nowrap hover:after:w-full after:w-0 after:h-[2px] after:bg-[#c5a059] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200"
               >
                 {link.label}
               </a>
@@ -105,13 +105,13 @@ export default function Navbar() {
           </nav>
 
           {/* CTA & Mobile Burger */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <a
               href="#orcamento"
-              className="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-[#c5a059] via-[#d4af37] to-[#b89047] hover:from-[#dfb76c] hover:to-[#c5a059] text-[#08090c] font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-lg shadow-md hover:shadow-luxury transition-all duration-300 hover:-translate-y-0.5"
+              className="hidden sm:inline-flex items-center gap-2 whitespace-nowrap bg-gradient-to-r from-[#c5a059] via-[#d4af37] to-[#b89047] hover:from-[#dfb76c] hover:to-[#c5a059] text-[#08090c] font-bold text-xs uppercase tracking-wider px-4 py-2 rounded-lg shadow-sm hover:shadow-luxury transition-all duration-300 hover:-translate-y-0.5"
             >
-              <Gauge className="w-4 h-4 text-[#08090c]" />
-              Solicitar Orçamento
+              <Gauge className="w-3.5 h-3.5 text-[#08090c]" />
+              <span>Solicitar Orçamento</span>
             </a>
 
             <button
@@ -119,7 +119,7 @@ export default function Navbar() {
               className="lg:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-[#c5a059] transition"
               aria-label="Abrir Menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
