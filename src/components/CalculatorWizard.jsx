@@ -59,23 +59,26 @@ export default function CalculatorWizard() {
 
   const estimated = getEstimatedGain();
 
-  // Generate WhatsApp text
+  // Generate WhatsApp text with clean encoding (no broken emoji characters)
   const generateWhatsAppUrl = () => {
-    const text = `🏁 *ORÇAMENTO / AGENDAMENTO - VENON PERFORMANCE* 🏁
------------------------------------------
-👤 *Nome:* ${formData.clientName || 'Cliente'}
-📞 *Telefone:* ${formData.clientPhone || 'Não informado'}
-🚗 *Veículo:* ${formData.brand || 'Não informado'} ${formData.model || ''}
-📅 *Ano/Motor:* ${formData.year || '-'} • ${formData.engine}
-⛽ *Combustível:* ${formData.fuel}
-⚙️ *Configuração Atual:* ${formData.currentMods}
+    const lines = [
+      "*ORÇAMENTO & AGENDAMENTO - VENON PERFORMANCE*",
+      "───────────────────────────────",
+      `*Nome:* ${formData.clientName || 'Cliente'}`,
+      `*Telefone:* ${formData.clientPhone || 'Não informado'}`,
+      `*Veículo:* ${formData.brand || 'Não informado'} ${formData.model || ''}`,
+      `*Ano/Motor:* ${formData.year || '-'} | ${formData.engine}`,
+      `*Combustível:* ${formData.fuel}`,
+      `*Configuração:* ${formData.currentMods}`,
+      "",
+      `*Serviço:* ${formData.service}`,
+      `*Opcionais:* ${formData.addOns.length > 0 ? formData.addOns.join(', ') : 'Nenhum'}`,
+      "───────────────────────────────",
+      "Olá! Gostaria de confirmar os valores e agendar na oficina."
+    ];
 
-🎯 *Serviço Escolhido:* ${formData.service}
-🔥 *Opcionais / Extras:* ${formData.addOns.length > 0 ? formData.addOns.join(', ') : 'Nenhum'}
------------------------------------------
-Gostaria de confirmar os valores e a disponibilidade de horário na oficina!`;
-
-    return `https://wa.me/5541996573270?text=${encodeURIComponent(text)}`;
+    const cleanText = lines.join('\n');
+    return `https://api.whatsapp.com/send?phone=5541996573270&text=${encodeURIComponent(cleanText)}`;
   };
 
   return (
