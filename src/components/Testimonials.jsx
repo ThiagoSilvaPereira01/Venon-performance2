@@ -32,14 +32,14 @@ export default function Testimonials() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 bg-[#c5a059]/10 border border-[#c5a059]/30 px-4 py-1.5 rounded-full mb-3">
-            <Star className="w-3.5 h-3.5 text-[#c5a059] fill-[#c5a059]" />
-            <span className="text-xs font-mono font-bold tracking-widest text-[#dfb76c] uppercase">
+          <div className="inline-flex items-center gap-2 bg-[#e11d48]/10 border border-[#e11d48]/30 px-4 py-1.5 rounded-full mb-3">
+            <Star className="w-3.5 h-3.5 text-[#e11d48] fill-[#e11d48]" />
+            <span className="text-xs font-mono font-bold tracking-widest text-[#fb7185] uppercase">
               Confiança & Reputação
             </span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight mb-4">
-            QUEM EXPERIMENTOU, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dfb76c] to-[#c5a059]">APROVA</span>
+            QUEM EXPERIMENTOU, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff3b5c] to-[#e11d48]">APROVA</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-lg font-light">
             Avaliações 100% reais de clientes que confiam suas máquinas à nossa equipe técnica.
@@ -47,9 +47,9 @@ export default function Testimonials() {
 
           {/* Google Score Badge */}
           <div className="inline-flex items-center gap-3 bg-[#0d1017] border border-white/[0.08] rounded-full px-5 py-2 mt-6 shadow-md">
-            <div className="flex text-[#dfb76c]">
+            <div className="flex text-[#fb7185]">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3.5 h-3.5 fill-[#dfb76c]" />
+                <Star key={i} className="w-3.5 h-3.5 fill-[#fb7185]" />
               ))}
             </div>
             <span className="text-white font-bold text-sm">5.0 / 5.0</span>
@@ -62,14 +62,14 @@ export default function Testimonials() {
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="rounded-2xl bg-[#0d1017] border border-white/[0.08] p-7 flex flex-col justify-between hover:border-[#c5a059]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-luxury relative group"
+              className="rounded-2xl bg-[#0d1017] border border-white/[0.08] p-7 flex flex-col justify-between hover:border-[#e11d48]/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-luxury relative group"
             >
-              <Quote className="w-8 h-8 text-[#c5a059]/15 absolute top-6 right-6" />
+              <Quote className="w-8 h-8 text-[#e11d48]/15 absolute top-6 right-6" />
 
               <div>
-                <div className="flex items-center gap-1 text-[#dfb76c] mb-4">
+                <div className="flex items-center gap-1 text-[#fb7185] mb-4">
                   {[...Array(rev.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-[#dfb76c]" />
+                    <Star key={i} className="w-3.5 h-3.5 fill-[#fb7185]" />
                   ))}
                 </div>
 
@@ -84,7 +84,7 @@ export default function Testimonials() {
                     {rev.name}
                     <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
                   </div>
-                  <div className="text-xs font-mono text-[#dfb76c] mt-0.5">{rev.car}</div>
+                  <div className="text-xs font-mono text-[#fb7185] mt-0.5">{rev.car}</div>
                 </div>
 
                 <span className="text-[10px] font-mono text-slate-500 uppercase">

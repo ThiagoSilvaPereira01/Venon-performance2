@@ -90,14 +90,14 @@ export default function GallerySection() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 bg-[#c5a059]/10 border border-[#c5a059]/30 px-4 py-1.5 rounded-full mb-3">
-            <Camera className="w-3.5 h-3.5 text-[#c5a059]" />
-            <span className="text-xs font-mono font-bold tracking-widest text-[#dfb76c] uppercase">
+          <div className="inline-flex items-center gap-2 bg-[#e11d48]/10 border border-[#e11d48]/30 px-4 py-1.5 rounded-full mb-3">
+            <Camera className="w-3.5 h-3.5 text-[#e11d48]" />
+            <span className="text-xs font-mono font-bold tracking-widest text-[#fb7185] uppercase">
               Showcase & Instalações
             </span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight mb-4">
-            PROJETOS & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dfb76c] to-[#c5a059]">ESTRUTURA</span>
+            PROJETOS & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff3b5c] to-[#e11d48]">ESTRUTURA</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-lg font-light">
             Conheça nosso espaço, nossos equipamentos de precisão e alguns dos projetos de alta performance entregues com excelência.
@@ -116,7 +116,7 @@ export default function GallerySection() {
                 onClick={() => setFilter(f.id)}
                 className={`text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all ${
                   filter === f.id
-                    ? 'bg-[#c5a059] text-[#08090c] font-bold shadow-luxury'
+                    ? 'bg-[#e11d48] text-white font-bold shadow-luxury'
                     : 'bg-[#0e1119] text-slate-400 hover:text-white border border-slate-800'
                 }`}
               >
@@ -132,7 +132,7 @@ export default function GallerySection() {
             <div
               key={item.id}
               onClick={() => setActiveModalImg(item)}
-              className="group rounded-2xl overflow-hidden bg-[#0d1017] border border-white/[0.08] hover:border-[#c5a059]/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-luxury cursor-pointer flex flex-col"
+              className="group rounded-2xl overflow-hidden bg-[#0d1017] border border-white/[0.08] hover:border-[#e11d48]/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-luxury cursor-pointer flex flex-col"
             >
               <div className="relative h-56 overflow-hidden bg-[#08090c]">
                 <img
@@ -146,14 +146,14 @@ export default function GallerySection() {
                 
                 {/* Overlay Badge */}
                 <div className="absolute top-3 left-3">
-                  <span className="bg-black/85 backdrop-blur-md border border-[#c5a059]/40 text-[10px] font-mono font-bold text-[#dfb76c] px-2.5 py-1 rounded-md uppercase tracking-wider">
+                  <span className="bg-black/85 backdrop-blur-md border border-[#e11d48]/40 text-[10px] font-mono font-bold text-[#fb7185] px-2.5 py-1 rounded-md uppercase tracking-wider">
                     {item.badge}
                   </span>
                 </div>
 
                 {/* Hover Icon */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="w-10 h-10 rounded-full bg-[#c5a059] text-[#08090c] flex items-center justify-center shadow-lg">
+                  <div className="w-10 h-10 rounded-full bg-[#e11d48] text-white flex items-center justify-center shadow-lg">
                     <Eye className="w-5 h-5" />
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export default function GallerySection() {
               {/* Card Meta */}
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <h4 className="font-display font-bold text-white text-base group-hover:text-[#dfb76c] transition-colors mb-1 line-clamp-1">
+                  <h4 className="font-display font-bold text-white text-base group-hover:text-[#fb7185] transition-colors mb-1 line-clamp-1">
                     {item.title}
                   </h4>
                   <p className="text-slate-400 text-xs line-clamp-2 mb-3 font-light">
@@ -170,7 +170,7 @@ export default function GallerySection() {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-[#dfb76c] font-medium truncate">
+                <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-[#fb7185] font-medium truncate">
                   ⚡ {item.specs}
                 </div>
               </div>
@@ -187,13 +187,13 @@ export default function GallerySection() {
           onClick={() => setActiveModalImg(null)}
         >
           <div
-            className="relative max-w-4xl w-full bg-[#0d1017] border border-[#c5a059]/40 rounded-2xl overflow-hidden shadow-2xl"
+            className="relative max-w-4xl w-full bg-[#0d1017] border border-[#e11d48]/40 rounded-2xl overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setActiveModalImg(null)}
-              className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/80 text-white flex items-center justify-center border border-slate-700 hover:border-[#c5a059] transition"
+              className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/80 text-white flex items-center justify-center border border-slate-700 hover:border-[#e11d48] transition"
             >
               <X className="w-5 h-5" />
             </button>
@@ -213,7 +213,7 @@ export default function GallerySection() {
             {/* Modal Info */}
             <div className="p-6 bg-[#0a0c12] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-t border-white/[0.08]">
               <div>
-                <span className="text-xs font-mono font-bold text-[#dfb76c] uppercase tracking-wider">
+                <span className="text-xs font-mono font-bold text-[#fb7185] uppercase tracking-wider">
                   {activeModalImg.badge}
                 </span>
                 <h3 className="text-xl font-bold text-white font-display">
@@ -231,7 +231,7 @@ export default function GallerySection() {
                 href={`https://wa.me/5541996573270?text=Olá Venon! Vi a foto "${activeModalImg.title}" no site e gostaria de saber mais sobre esse serviço.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#c5a059] hover:bg-[#dfb76c] text-[#08090c] font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-xl shadow-luxury transition whitespace-nowrap"
+                className="inline-flex items-center gap-2 bg-[#e11d48] hover:bg-[#f43f5e] text-white font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-xl shadow-luxury transition whitespace-nowrap"
               >
                 Quero um Projeto Assim
               </a>
