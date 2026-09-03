@@ -10,7 +10,7 @@ export default function Services() {
       category: 'remap',
       title: 'Remap Stage 1',
       badge: 'MAIS PROCURADO',
-      badgeColor: 'bg-[#c5a059]/15 text-[#dfb76c] border-[#c5a059]/40',
+      badgeColor: 'bg-[#e11d48]/15 text-[#fb7185] border-[#e11d48]/40',
       description: 'Otimização 100% eletrônica mantendo a mecânica original de fábrica. Ganhos expressivos de torque, potência e eliminação total do delay do acelerador.',
       features: [
         'Sem necessidade de alterações mecânicas',
@@ -27,7 +27,7 @@ export default function Services() {
       category: 'remap',
       title: 'Remap Stage 2 & 3',
       badge: 'MÁXIMA PERFORMANCE',
-      badgeColor: 'bg-[#dfb76c]/15 text-[#f3e5ab] border-[#dfb76c]/40',
+      badgeColor: 'bg-[#fb7185]/15 text-[#fecdd3] border-[#fb7185]/40',
       description: 'Para quem busca extrair o potencial extremo do conjunto mecânico. Calibração desenvolvida para carros com Downpipe, intake, intercooler ou turbina maior.',
       features: [
         'Calibração customizada passo a passo em dinamômetro',
@@ -61,7 +61,7 @@ export default function Services() {
       category: 'race',
       title: 'Acerto FuelTech & Injepro',
       badge: 'PRO MOTORSPORT',
-      badgeColor: 'bg-[#c5a059]/15 text-[#dfb76c] border-[#c5a059]/40',
+      badgeColor: 'bg-[#e11d48]/15 text-[#fb7185] border-[#e11d48]/40',
       description: 'Instalação, confecção de chicote elétrico motorsport e acerto fino de injeções eletrônicas programáveis para rua, pista e arrancada.',
       features: [
         'Calibração completa FT450, FT550, FT600 e Injepro',
@@ -95,7 +95,7 @@ export default function Services() {
       category: 'mechanics',
       title: 'Preparação & Revisão',
       badge: 'OFICINA COMPLETA',
-      badgeColor: 'bg-[#c5a059]/15 text-[#dfb76c] border-[#c5a059]/40',
+      badgeColor: 'bg-[#e11d48]/15 text-[#fb7185] border-[#e11d48]/40',
       description: 'Engenharia e montagem de upgrades: Downpipes, velas especiais de Iridium, bobinas esportivas, bombas de alta pressão e manutenção de alto padrão.',
       features: [
         'Instalação de Downpipes e escapamentos em Inox 304',
@@ -119,15 +119,15 @@ export default function Services() {
         
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 bg-[#c5a059]/10 border border-[#c5a059]/30 px-4 py-1.5 rounded-full mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
-            <span className="text-xs font-mono font-bold tracking-widest text-[#dfb76c] uppercase">
+          <div className="inline-flex items-center gap-2 bg-[#e11d48]/10 border border-[#e11d48]/30 px-4 py-1.5 rounded-full mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-[#e11d48]" />
+            <span className="text-xs font-mono font-bold tracking-widest text-[#fb7185] uppercase">
               Soluções de Engenharia & Performance
             </span>
           </div>
           
           <h2 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight mb-5">
-            SERVIÇOS DE <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dfb76c] to-[#c5a059]">ALTO PADRÃO</span>
+            SERVIÇOS DE <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff3b5c] to-[#e11d48]">ALTO PADRÃO</span>
           </h2>
           
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
@@ -148,7 +148,7 @@ export default function Services() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 ${
                   activeTab === tab.id
-                    ? 'bg-[#c5a059] text-[#08090c] shadow-luxury font-bold'
+                    ? 'bg-[#e11d48] text-white shadow-luxury font-bold'
                     : 'bg-[#0e1119] text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800'
                 }`}
               >
@@ -165,13 +165,13 @@ export default function Services() {
             return (
               <div
                 key={service.id}
-                className="rounded-2xl bg-gradient-to-b from-[#0f121a] to-[#0a0c12] border border-white/[0.08] hover:border-[#c5a059]/40 p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-luxury group"
+                className="rounded-2xl bg-gradient-to-b from-[#0f121a] to-[#0a0c12] border border-white/[0.08] hover:border-[#e11d48]/50 p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-luxury group"
               >
                 <div>
                   {/* Top Header */}
                   <div className="flex items-start justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-[#08090c] border border-white/[0.08] group-hover:border-[#c5a059]/40 flex items-center justify-center transition-colors">
-                      <Icon className="w-5 h-5 text-[#dfb76c]" />
+                    <div className="w-12 h-12 rounded-xl bg-[#08090c] border border-white/[0.08] group-hover:border-[#e11d48]/40 flex items-center justify-center transition-colors">
+                      <Icon className="w-5 h-5 text-[#fb7185]" />
                     </div>
                     <span className={`text-[10px] font-mono font-bold tracking-wider uppercase px-2.5 py-1 rounded-md border ${service.badgeColor}`}>
                       {service.badge}
@@ -179,7 +179,7 @@ export default function Services() {
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="font-display font-bold text-2xl text-white mb-3 group-hover:text-[#dfb76c] transition-colors">
+                  <h3 className="font-display font-bold text-2xl text-white mb-3 group-hover:text-[#fb7185] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-slate-300 text-sm leading-relaxed mb-6 font-light">
@@ -190,7 +190,7 @@ export default function Services() {
                   <div className="space-y-2.5 mb-8 border-t border-white/[0.06] pt-5">
                     {service.features.map((feat, idx) => (
                       <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-300">
-                        <CheckCircle2 className="w-4 h-4 text-[#c5a059] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-[#e11d48] shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -202,7 +202,7 @@ export default function Services() {
                   href={`https://wa.me/5541996573270?text=${encodeURIComponent(service.whatsappMsg)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#090b10] hover:bg-[#c5a059] text-slate-200 hover:text-[#08090c] border border-white/[0.1] hover:border-[#c5a059] font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl transition-all duration-300"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#090b10] hover:bg-[#e11d48] text-slate-200 hover:text-white border border-white/[0.1] hover:border-[#e11d48] font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl transition-all duration-300 shadow-sm"
                 >
                   <span>Orçar via WhatsApp</span>
                   <ArrowRight className="w-4 h-4" />

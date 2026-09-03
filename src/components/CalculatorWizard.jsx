@@ -85,20 +85,20 @@ export default function CalculatorWizard() {
     <section id="orcamento" className="py-24 relative bg-[#090b10] border-t border-white/[0.06] overflow-hidden">
       
       {/* Background Radial Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#c5a059]/[0.05] rounded-full blur-[150px] pointer-events-none"></div>
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#e11d48]/[0.06] rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 bg-[#c5a059]/10 border border-[#c5a059]/30 px-4 py-1.5 rounded-full mb-3">
-            <Zap className="w-3.5 h-3.5 text-[#c5a059] fill-[#c5a059]" />
-            <span className="text-xs font-mono font-bold tracking-widest text-[#dfb76c] uppercase">
+          <div className="inline-flex items-center gap-2 bg-[#e11d48]/10 border border-[#e11d48]/30 px-4 py-1.5 rounded-full mb-3">
+            <Zap className="w-3.5 h-3.5 text-[#e11d48] fill-[#e11d48]" />
+            <span className="text-xs font-mono font-bold tracking-widest text-[#fb7185] uppercase">
               Simulador & Cotação
             </span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight mb-4">
-            CONFIGURE SEU <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dfb76c] to-[#c5a059]">PROJETO</span>
+            CONFIGURE SEU <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff3b5c] to-[#e11d48]">PROJETO</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-lg font-light">
             Selecione as especificações do seu carro e receba uma proposta personalizada diretamente com nossos preparadores.
@@ -124,7 +124,7 @@ export default function CalculatorWizard() {
                   onClick={() => setStep(s.num)}
                   className={`flex items-center gap-2 cursor-pointer transition ${
                     step === s.num
-                      ? 'text-[#dfb76c] font-bold'
+                      ? 'text-[#fb7185] font-bold'
                       : step > s.num
                       ? 'text-emerald-400'
                       : 'text-slate-500 hover:text-slate-300'
@@ -133,7 +133,7 @@ export default function CalculatorWizard() {
                   <span
                     className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-mono font-bold ${
                       step === s.num
-                        ? 'bg-[#c5a059] text-[#08090c]'
+                        ? 'bg-[#e11d48] text-white shadow-md'
                         : step > s.num
                         ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40'
                         : 'bg-[#08090c] border border-slate-800 text-slate-400'
@@ -152,7 +152,7 @@ export default function CalculatorWizard() {
             {step === 1 && (
               <div className="space-y-6">
                 <h3 className="text-base font-bold text-white flex items-center gap-2">
-                  <Settings className="w-4 h-4 text-[#c5a059]" />
+                  <Settings className="w-4 h-4 text-[#e11d48]" />
                   Qual serviço você deseja realizar?
                 </h3>
                 
@@ -170,14 +170,14 @@ export default function CalculatorWizard() {
                       onClick={() => setFormData({ ...formData, service: srv.title })}
                       className={`p-4 rounded-xl border cursor-pointer transition-all ${
                         formData.service === srv.title
-                          ? 'bg-[#c5a059]/10 border-[#c5a059] shadow-sm'
+                          ? 'bg-[#e11d48]/10 border-[#e11d48] shadow-sm'
                           : 'bg-[#090b10] border-white/[0.06] hover:border-slate-700 hover:bg-slate-900/60'
                       }`}
                     >
                       <div className="flex items-center justify-between mb-1">
                         <span className="font-bold text-white text-sm">{srv.title}</span>
                         {formData.service === srv.title && (
-                          <span className="w-2 h-2 rounded-full bg-[#c5a059]"></span>
+                          <span className="w-2 h-2 rounded-full bg-[#e11d48]"></span>
                         )}
                       </div>
                       <p className="text-xs text-slate-400 font-light">{srv.desc}</p>
@@ -188,7 +188,7 @@ export default function CalculatorWizard() {
                 <div className="pt-4 flex justify-end">
                   <button
                     onClick={() => setStep(2)}
-                    className="inline-flex items-center gap-2 bg-[#c5a059] hover:bg-[#dfb76c] text-[#08090c] font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl transition"
+                    className="inline-flex items-center gap-2 bg-[#e11d48] hover:bg-[#f43f5e] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl transition shadow-md"
                   >
                     Próximo: Dados do Carro <ArrowRight className="w-4 h-4" />
                   </button>
@@ -200,7 +200,7 @@ export default function CalculatorWizard() {
             {step === 2 && (
               <div className="space-y-6">
                 <h3 className="text-base font-bold text-white flex items-center gap-2">
-                  <Car className="w-4 h-4 text-[#c5a059]" />
+                  <Car className="w-4 h-4 text-[#e11d48]" />
                   Qual é o seu veículo?
                 </h3>
 
@@ -217,7 +217,7 @@ export default function CalculatorWizard() {
                         onClick={() => setFormData({ ...formData, brand: b })}
                         className={`text-xs px-3 py-1.5 rounded-lg border transition ${
                           formData.brand === b
-                            ? 'bg-[#c5a059] text-[#08090c] border-[#c5a059] font-semibold'
+                            ? 'bg-[#e11d48] text-white border-[#e11d48] font-semibold shadow-sm'
                             : 'bg-[#090b10] text-slate-300 border-white/[0.08] hover:border-slate-700'
                         }`}
                       >
@@ -230,7 +230,7 @@ export default function CalculatorWizard() {
                     placeholder="Outra marca ou confirme a montadora..."
                     value={formData.brand}
                     onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
-                    className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059]"
+                    className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#e11d48]"
                   />
                 </div>
 
@@ -244,7 +244,7 @@ export default function CalculatorWizard() {
                       placeholder="Ex: Jetta 2.0 TSI Highline"
                       value={formData.model}
                       onChange={(e) => setFormData({ ...formData, model: e.target.value })}
-                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059]"
+                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#e11d48]"
                     />
                   </div>
 
@@ -257,7 +257,7 @@ export default function CalculatorWizard() {
                       placeholder="Ex: 2018 / 2019"
                       value={formData.year}
                       onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059]"
+                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#e11d48]"
                     />
                   </div>
                 </div>
@@ -270,7 +270,7 @@ export default function CalculatorWizard() {
                     <select
                       value={formData.engine}
                       onChange={(e) => setFormData({ ...formData, engine: e.target.value })}
-                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059]"
+                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#e11d48]"
                     >
                       <option value="1.0 / 1.4 / 1.6 Turbo">1.0 / 1.4 / 1.6 Turbo (TSI, THP, etc)</option>
                       <option value="2.0 TSI / Turbo">2.0 Turbo (EA888, B48, N20, etc)</option>
@@ -289,7 +289,7 @@ export default function CalculatorWizard() {
                     <select
                       value={formData.fuel}
                       onChange={(e) => setFormData({ ...formData, fuel: e.target.value })}
-                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059]"
+                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#e11d48]"
                     >
                       <option value="Gasolina / Flex">Gasolina Comum / Flex</option>
                       <option value="Gasolina Premium / Podium">Gasolina Podium / Octapro</option>
@@ -308,7 +308,7 @@ export default function CalculatorWizard() {
                   </button>
                   <button
                     onClick={() => setStep(3)}
-                    className="inline-flex items-center gap-2 bg-[#c5a059] hover:bg-[#dfb76c] text-[#08090c] font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl transition"
+                    className="inline-flex items-center gap-2 bg-[#e11d48] hover:bg-[#f43f5e] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl transition shadow-md"
                   >
                     Próximo: Extras & Upgrades <ArrowRight className="w-4 h-4" />
                   </button>
@@ -320,7 +320,7 @@ export default function CalculatorWizard() {
             {step === 3 && (
               <div className="space-y-6">
                 <h3 className="text-base font-bold text-white flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#c5a059]" />
+                  <Sparkles className="w-4 h-4 text-[#e11d48]" />
                   Configuração atual e opcionais desejados
                 </h3>
 
@@ -339,7 +339,7 @@ export default function CalculatorWizard() {
                         onClick={() => setFormData({ ...formData, currentMods: mod.val })}
                         className={`p-3.5 rounded-xl border cursor-pointer text-center transition ${
                           formData.currentMods === mod.val
-                            ? 'bg-[#c5a059]/10 border-[#c5a059] text-white'
+                            ? 'bg-[#e11d48]/10 border-[#e11d48] text-white'
                             : 'bg-[#08090c] border-white/[0.08] text-slate-400 hover:text-white'
                         }`}
                       >
@@ -363,7 +363,7 @@ export default function CalculatorWizard() {
                           onClick={() => handleAddOnToggle(addon)}
                           className={`p-3 rounded-xl border cursor-pointer flex items-center justify-between text-xs transition ${
                             isChecked
-                              ? 'bg-[#08090c] border-[#c5a059] text-white font-medium'
+                              ? 'bg-[#08090c] border-[#e11d48] text-white font-medium'
                               : 'bg-[#08090c]/60 border-white/[0.06] text-slate-400 hover:text-slate-200'
                           }`}
                         >
@@ -371,7 +371,7 @@ export default function CalculatorWizard() {
                           <span
                             className={`w-4 h-4 rounded flex items-center justify-center border ${
                               isChecked
-                                ? 'bg-[#c5a059] border-[#c5a059] text-[#08090c]'
+                                ? 'bg-[#e11d48] border-[#e11d48] text-white'
                                 : 'border-slate-700 bg-[#08090c]'
                             }`}
                           >
@@ -392,7 +392,7 @@ export default function CalculatorWizard() {
                   </button>
                   <button
                     onClick={() => setStep(4)}
-                    className="inline-flex items-center gap-2 bg-[#c5a059] hover:bg-[#dfb76c] text-[#08090c] font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl transition"
+                    className="inline-flex items-center gap-2 bg-[#e11d48] hover:bg-[#f43f5e] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl transition shadow-md"
                   >
                     Próximo: Finalizar Orçamento <ArrowRight className="w-4 h-4" />
                   </button>
@@ -404,7 +404,7 @@ export default function CalculatorWizard() {
             {step === 4 && (
               <div className="space-y-6">
                 <h3 className="text-base font-bold text-white flex items-center gap-2">
-                  <Send className="w-4 h-4 text-[#c5a059]" />
+                  <Send className="w-4 h-4 text-[#e11d48]" />
                   Seus dados para agendamento
                 </h3>
 
@@ -418,7 +418,7 @@ export default function CalculatorWizard() {
                       placeholder="Ex: Thiago Silva"
                       value={formData.clientName}
                       onChange={(e) => setFormData({ ...formData, clientName: e.target.value })}
-                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059]"
+                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#e11d48]"
                     />
                   </div>
 
@@ -431,17 +431,17 @@ export default function CalculatorWizard() {
                       placeholder="Ex: (41) 99999-9999"
                       value={formData.clientPhone}
                       onChange={(e) => setFormData({ ...formData, clientPhone: e.target.value })}
-                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059]"
+                      className="w-full bg-[#08090c] border border-white/[0.08] rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#e11d48]"
                     />
                   </div>
                 </div>
 
 
                 {/* Final WhatsApp Call To Action Button */}
-                <div className="p-5 rounded-xl bg-[#090b10] border border-[#c5a059]/30 mt-6">
+                <div className="p-5 rounded-xl bg-[#090b10] border border-[#e11d48]/30 mt-6">
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div>
-                      <div className="text-[#dfb76c] font-bold text-sm flex items-center gap-1.5">
+                      <div className="text-[#fb7185] font-bold text-sm flex items-center gap-1.5">
                         <Check className="w-4 h-4" /> Proposta Pronta para Envio!
                       </div>
                       <p className="text-xs text-slate-400 mt-1 font-light">
@@ -453,7 +453,7 @@ export default function CalculatorWizard() {
                       href={generateWhatsAppUrl()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#c5a059] hover:bg-[#dfb76c] text-[#08090c] font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-luxury transition whitespace-nowrap"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#e11d48] hover:bg-[#f43f5e] text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-luxury transition whitespace-nowrap"
                     >
                       <Phone className="w-4 h-4" />
                       Enviar para WhatsApp
@@ -477,11 +477,11 @@ export default function CalculatorWizard() {
           {/* Live Telemetry Summary Sidebar (4 Cols) */}
           <div className="lg:col-span-4 bg-gradient-to-b from-[#0f121a] to-[#0a0c12] border border-white/[0.08] rounded-2xl p-6 shadow-2xl relative">
             <div className="absolute top-4 right-4">
-              <span className="w-2 h-2 rounded-full bg-[#c5a059] inline-block"></span>
+              <span className="w-2 h-2 rounded-full bg-[#e11d48] inline-block"></span>
             </div>
 
             <h4 className="font-display font-bold text-white text-lg mb-4 flex items-center gap-2">
-              <Gauge className="w-4 h-4 text-[#c5a059]" />
+              <Gauge className="w-4 h-4 text-[#e11d48]" />
               Estimativa do Projeto
             </h4>
 
@@ -489,7 +489,7 @@ export default function CalculatorWizard() {
             <div className="space-y-3 mb-6">
               <div className="bg-[#08090c] p-3.5 rounded-xl border border-white/[0.06]">
                 <span className="text-[11px] font-mono text-slate-400 uppercase">Ganho Estimado de Potência</span>
-                <div className="text-2xl font-bold font-display text-[#dfb76c] mt-0.5">
+                <div className="text-2xl font-bold font-display text-[#fb7185] mt-0.5">
                   {estimated.hp}
                 </div>
               </div>
@@ -520,7 +520,7 @@ export default function CalculatorWizard() {
               </div>
               <div className="flex justify-between text-slate-400">
                 <span>Configuração:</span>
-                <span className="text-[#dfb76c] font-medium">{formData.currentMods}</span>
+                <span className="text-[#fb7185] font-medium">{formData.currentMods}</span>
               </div>
               <div className="flex justify-between text-slate-400">
                 <span>Opcionais:</span>
@@ -536,7 +536,7 @@ export default function CalculatorWizard() {
                 href={generateWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#c5a059] hover:bg-[#dfb76c] text-[#08090c] font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow-luxury transition"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#e11d48] hover:bg-[#f43f5e] text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow-luxury transition"
               >
                 <Send className="w-3.5 h-3.5" />
                 Pedir Cotação Agora
